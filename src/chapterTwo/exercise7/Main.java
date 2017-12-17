@@ -18,5 +18,31 @@ public class Main {
         }
         System.out.println("Полученные слова: ");
         System.out.println(listt);
+        findWordWithDifferentSymbols(listt);
+    }
+
+    public static int countEqualSymbols(String s) {
+        String word = s.toLowerCase();
+        char[] str = word.toCharArray();
+        int result = 0;
+        for (int i = 0; i < str.length; i++) {
+            for (int j = str.length - 1; j > i - 1; j--)
+                if (str[i] == str[j]) {
+                    result++;
+                }
+        }
+        return result;
+    }
+
+    public static void findWordWithDifferentSymbols(List<String> list) {
+        String result = null;
+        for (String word : list) {
+            if (countEqualSymbols(word) == word.length()) {
+                result = word;
+                System.out.println("Слово с разными символами:" + result);
+            }else {
+                System.out.println("Слово: "+ word +" не имеет всех разных символов");
+            }
+        }
     }
 }
