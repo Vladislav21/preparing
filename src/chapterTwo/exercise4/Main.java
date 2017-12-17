@@ -24,7 +24,6 @@ public class Main {
         System.out.println("Полученный список: ");
         System.out.println(list);
         findWordWithMinDifferentSymbols(list);
-
     }
 
  /*   public static int opredelenieMaxPovtorBukv(String word) {
