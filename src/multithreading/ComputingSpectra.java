@@ -7,6 +7,7 @@ import java.util.concurrent.*;
 public class ComputingSpectra {
     public static void main(String[] args) {
         List<Spectra> listSpectra = new ArrayList<>();
+        List<Spectra> resultSpectra = new ArrayList<>();
 
         Spectra spectra1 = new Spectra();
         Spectra spectra2 = new Spectra();
@@ -52,27 +53,22 @@ public class ComputingSpectra {
         executorVlad.execute(futureTaskVlad1);
         executorVlad.execute(futureTaskVlad2);
         executorVlad.execute(futureTaskVlad3);
-
+        executorVlad.shutdown();
         try {
-            System.out.println(futureTaskVlad1.get());
-            System.out.println(futureTaskVlad2.get());
-            System.out.println(futureTaskVlad3.get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+            if (executorVlad.isShutdown()) {
+                resultSpectra.add(futureTaskVlad1.get());
+                resultSpectra.add(futureTaskVlad2.get());
+                resultSpectra.add(futureTaskVlad3.get());
+            }
+            System.out.println("New list of spectra:\n"+resultSpectra);
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
-
-        System.out.println(futureTaskVlad1.isDone());
-        System.out.println(futureTaskVlad2.isDone());
-        System.out.println(futureTaskVlad3.isDone());
-        executorVlad.shutdown();
-
     }
 }
 
 class Summ {
-    public Spectra incrementsPointsOn2(Spectra spectra) {
+    Spectra incrementsPointsOn2(Spectra spectra) {
         Spectra newSpectra = new Spectra();
         int length = spectra.getPoints().size();
         int newX;
