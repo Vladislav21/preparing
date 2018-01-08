@@ -8,8 +8,10 @@ public class Spectra {
     private static List<Point> points = new ArrayList<>();
     private static List<String> list = new ArrayList<>();
     private static final String pathToFile = "C:\\Users\\Владислав\\IdeaProjects\\Mikhel\\preparing\\test.txt";
-    private static int check = 32;
+    private static int check = 9;
     private static char checkChar = (char) check;
+ /*   private static int secondCheck = 32;
+    private static char secondCheckChar = (char) secondCheck;*/
 
     public static int countBeforeCheckSymbol(String str) {
         int count = 0;
@@ -25,7 +27,7 @@ public class Spectra {
         return count;
     }
 
-    public static int countAfterCheckSymbol(String str){
+    public static int countAfterCheckSymbol(String str) {
         int count = 0;
         count = str.indexOf(checkChar);
         return count;
@@ -41,12 +43,12 @@ public class Spectra {
                 int count2 = countAfterCheckSymbol(line);
                 char[] lineChar = line.toCharArray();
                 char[] firstNumber = new char[count];
-                char[] secondNumber = new char[line.length()-count2];
+                char[] secondNumber = new char[line.length() - count2];
                 for (int i = 0; i < count; i++) {
                     firstNumber[i] = lineChar[i];
                 }
                 for (int i = count2; i < line.length(); i++) {
-                    secondNumber[i-count2] = lineChar[i];
+                    secondNumber[i - count2] = lineChar[i];
                 }
 
                 String firstNumberToString = new String(firstNumber);
@@ -56,7 +58,7 @@ public class Spectra {
             }
             bf.close();
             for (int i = 0; i < list.size(); i++) {
-                point  = new Point();
+                point = new Point();
                 point.setX(Double.valueOf(list.get(i)));
                 i++;
                 point.setY(Double.valueOf(list.get(i)));
