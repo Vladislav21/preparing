@@ -9,7 +9,7 @@ public class Main {
 
         Employee slave = new Employee("Хромов");
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2017, 11, 2);
+        calendar.set(2017, Calendar.MAY, 2);
         setTasks(slave);
         System.out.println("Дата сдачи работы: " + calendar.getTime());
     }

@@ -20,21 +20,21 @@ public class Main {
         Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(o1.length()==o2.length()) return 0;
-                else if (o1.length()<o2.length()) return 1;
-                else return  -1;
+                if (o1.length() == o2.length()) return 0;
+                else if (o1.length() < o2.length()) return 1;
+                else return -1;
             }
         });
         System.out.println("Сортировка методом sort:");
         System.out.println(list);
         System.out.println("Сортировка пузырьковым методом:");
         String[] str = list.toArray(new String[list.size()]);
-        for (int i = str.length-1; i > 0; i--) {
+        for (int i = str.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (str[j].length() > str[j + 1].length()) {
                     String tmp = str[j];
-                    str[j]=str[j+1];
-                    str[j+1] = tmp;
+                    str[j] = str[j + 1];
+                    str[j + 1] = tmp;
                 }
             }
         }

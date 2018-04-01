@@ -13,7 +13,7 @@ public class Spectra {
  /*   private static int secondCheck = 32;
     private static char secondCheckChar = (char) secondCheck;*/
 
-    public static int countBeforeCheckSymbol(String str) {
+    private static int countBeforeCheckSymbol(String str) {
         int count = 0;
         char[] lineChar = str.toCharArray();
         for (char symbol : lineChar) {
@@ -27,7 +27,7 @@ public class Spectra {
         return count;
     }
 
-    public static int countAfterCheckSymbol(String str) {
+    private static int countAfterCheckSymbol(String str) {
         int count = 0;
         count = str.indexOf(checkChar);
         return count;
@@ -65,8 +65,6 @@ public class Spectra {
                 points.add(point);
             }
             System.out.println(points.toString());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
