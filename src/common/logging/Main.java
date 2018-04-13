@@ -18,9 +18,7 @@ public class Main {
             double v = actionOne(a, b);
             log.info(String.valueOf(v));
         }
-
     }
-
     private static double actionOne(int a, int b){
         a++;
         b++;

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BookCatalogue>
+    <Book>
+        <Title>Samara University</Title>
+        <Author>Max Putin</Author>
+        <Cost currency="USD">2.95</Cost>
+    </Book>
+    <Book>
+        <Title>Safe House</Title>
+        <Author>Dima Smirnov</Author>
+        <Cost currency="USD">2.95</Cost>
+    </Book>
+    <Book>
+        <Title>Khife</Title>
+        <Author>Petr Second</Author>
+        <Cost Currency="RUB">467</Cost>
+    </Book>
+    <Book>
+        <Title>Khife</Title>
+        <Author>Petr Second</Author>
+        <Cost Currency="RUB">467</Cost>
+    </Book>
+    <Book>
+        <Title>Khife</Title>
+        <Author>Petr Second</Author>
+        <Cost Currency="RUB">467</Cost>
+    </Book>
+    <Book>
+        <Title>Khife</Title>
+        <Author>Petr Second</Author>
+        <Cost Currency="RUB">467</Cost>
+    </Book>
+    <Book>
+        <Title>Khife</Title>
+        <Author>Petr Second</Author>
+        <Cost Currency="RUB">467</Cost>
+    </Book>
+</BookCatalogue>
